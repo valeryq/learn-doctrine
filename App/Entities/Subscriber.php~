@@ -1,0 +1,170 @@
+<?php namespace App\Entities;
+
+/**
+ * Class Subscriber
+ *
+ * @Entity
+ * @Table(name="subscribers")
+ * @NamedQueries({
+ *     @NamedQuery(name="comment not null", query="SELECT u FROM __CLASS__ u WHERE u.comment IS NOT NULL")
+ * })
+ */
+class Subscriber
+{
+    /**
+     * @Id
+     * @GeneratedValue
+     * @Column(name="id", type="integer")
+     */
+    private $id;
+
+    /**
+     * @Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @Column(name="phone", type="string")
+     */
+    private $phone;
+
+    /**
+     * @Column(name="email", type="string")
+     */
+    private $email;
+
+    /**
+     * @Column(name="comment", type="text")
+     */
+    private $comment;
+
+    /**
+     * @Column(name="created_at", type="datetime")
+     */
+    private $created_at;
+
+    /**
+     * @Column(name="updated_at", type="datetime")
+     */
+    private $updated_at;
+
+    /**
+     * Set id
+     *
+     * @param integer $id
+     *
+     * @return Subscriber
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Subscriber
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     *
+     * @return Subscriber
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return Subscriber
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set comment
+     *
+     * @param string $comment
+     *
+     * @return Subscriber
+     */
+    public function setComment($comment)
+    {
+        $this->comment = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Get comment
+     *
+     * @return string
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+}

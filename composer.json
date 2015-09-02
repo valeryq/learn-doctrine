@@ -1,0 +1,17 @@
+{
+    "name": "zakharchenko/doctrine",
+    "require": {
+        "doctrine/orm": "^2.5"
+    },
+    "authors": [
+        {
+            "name": "Valery Zakharchenko",
+            "email": "valprogramm@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
